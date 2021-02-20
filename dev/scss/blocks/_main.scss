@@ -1,7 +1,9 @@
 .main{
-
+    padding: 0 1rem;
+    
     @include laptop{
         grid-column: 2 / -1;
         grid-row: 2 / -1;
+        padding: 0 2rem;
     }
 }
