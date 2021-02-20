@@ -1,8 +1,0 @@
-.sidebar{
-
-    @include laptop{
-        background: #343434;
-        grid-column: 1 / 2;
-        grid-row: 1 / -1;
-    }
-}
