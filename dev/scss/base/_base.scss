@@ -1,6 +1,7 @@
 body{
-    background-color: #222;
-    color: #fff;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $main-font, 'sans-serif';
 
     @include laptop{
         display: grid;

@@ -1,3 +1,6 @@
+@import "config/fonts";
+@import "config/color";
+
 @import "mixins/breakpoints";
 @import "mixins/reset-list";
 
@@ -13,3 +16,5 @@
 @import "blocks/menu";
 
 @import "blocks/main";
+@import "blocks/lightbox";
+@import "blocks/forms";
