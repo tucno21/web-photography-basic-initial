@@ -117,7 +117,7 @@ template { display: none; }
 
 body { background-color: var(--background-color); color: var(--text-color); font-family: "Cabin", "sans-serif"; }
 
-@media screen and (min-width: 1024px) { body { display: grid; min-height: 100vh; grid-template-columns: 15% 85%; grid-template-rows: 60px 1fr; } }
+@media screen and (min-width: 1024px) { body { display: grid; min-height: 100vh; grid-template-columns: 10% 90%; grid-template-rows: 60px 1fr; overflow: hidden; } }
 
 .header { padding: 1em 0; }
 
@@ -127,7 +127,7 @@ body { background-color: var(--background-color); color: var(--text-color); font
 
 .topbar__icon { width: 90px; display: flex; justify-content: space-around; }
 
-@media screen and (min-width: 1024px) { .topbar { height: 60px; left: 100%; width: 25vw; justify-content: space-around; transform: translateX(-100%); background-color: transparent; } }
+@media screen and (min-width: 1024px) { .topbar { height: 90px; left: 100%; width: 25vw; justify-content: space-around; transform: translateX(-100%); background-color: transparent; padding-left: 0; } }
 
 @media screen and (min-width: 1400px) { .topbar { width: 21vw; } }
 
@@ -155,11 +155,11 @@ body { background-color: var(--background-color); color: var(--text-color); font
 
 .logo__img { max-width: 100%; }
 
-@media screen and (min-width: 1024px) { .logo { position: absolute; left: 2%; top: 1rem; width: 10%; } }
+@media screen and (min-width: 1024px) { .logo { position: absolute; left: 35px; top: 1rem; width: 5%; } }
 
 .sidebar { position: fixed; background: var(--dark-color); width: 100%; height: 100vh; top: 50px; transform: translateY(-100%); transition: transform .4s; z-index: 1; }
 
-@media screen and (min-width: 1024px) { .sidebar { width: 15%; top: 0; grid-column: 1 / 2; grid-row: 1 / -1; transform: translateY(0); } }
+@media screen and (min-width: 1024px) { .sidebar { width: 10%; top: 0; grid-column: 1 / 2; grid-row: 1 / -1; transform: translateY(0); } }
 
 .sidebar.show { transform: translateY(0); }
 
@@ -169,13 +169,15 @@ body { background-color: var(--background-color); color: var(--text-color); font
 
 @media screen and (min-width: 1024px) { .main-menu__item { line-height: 3; border: none; } }
 
-.main-menu__link { text-decoration: none; color: var(--text-color); }
+.main-menu__link { text-decoration: none; color: var(--text-color); font-size: 1.2rem; }
 
-@media screen and (min-width: 1024px) { .main-menu { border: none; height: 100vh; margin-top: 0; display: flex; flex-direction: column; justify-content: center; background-color: transparent; font-size: 1.5rem; } }
+.main-menu__link--active { color: var(--primary-color); }
+
+@media screen and (min-width: 1024px) { .main-menu { border: none; height: 100vh; margin-top: 0; display: flex; flex-direction: column; justify-content: center; background-color: transparent; } }
 
 .main { padding: 0 1rem; }
 
-@media screen and (min-width: 1024px) { .main { grid-column: 2 / -1; grid-row: 2 / -1; padding: 0 2rem; } }
+@media screen and (min-width: 1024px) { .main { grid-column: 2 / -1; grid-row: 2 / -1; padding: 0 2rem; overflow: auto; height: 90vh; } }
 
 .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; display: flex; justify-content: center; align-items: center; transform: scale(0); transition: transform .3s; }
 
